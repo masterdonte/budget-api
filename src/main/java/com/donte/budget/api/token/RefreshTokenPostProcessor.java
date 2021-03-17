@@ -51,7 +51,7 @@ public class RefreshTokenPostProcessor implements ResponseBodyAdvice<OAuth2Acces
 
 	private void removerRefreshTokenDoBody(DefaultOAuth2AccessToken token) {
 		token.setRefreshToken(null);
-		token.getAdditionalInformation().remove("nome");//FIXME colocado de forma opcional para remover o nome do corpo da requisicao
+		token.getAdditionalInformation().remove("nome");// colocado de forma opcional para remover o nome do corpo da requisicao
 	}
 
 	private void adicionarRefreshTokenNoCookie(String refreshToken, HttpServletRequest req, HttpServletResponse resp) {
